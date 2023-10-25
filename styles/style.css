@@ -18,9 +18,7 @@ body{
   list-style: circle;
 }
 
-/* .header__links-list-item{
 
-} */
 
 .header__links-list-item_no-bullit{
   list-style: none;
@@ -39,9 +37,9 @@ body{
   text-decoration: none;
 }
 
-/* .header__logo {
-
-} */
+.header__logo {
+display: block;
+}
 
 .header__logo-image{
   width: 148px;
@@ -70,11 +68,11 @@ body{
 }
 
 .overlay{
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
-  background-color: black;
   opacity: 0.6;
+  background-color: black;
 }
 
 .cover__title{
@@ -84,13 +82,14 @@ body{
   left: 50px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   max-width: 1440px;
-  
 }
 
 .alligned-text{
   display: flex;
   justify-content: flex-start;
+  max-height: 100px;
   color: #FFF;
   font-weight: 700;
   font-size: 100px;
@@ -98,13 +97,11 @@ body{
   line-height: 115%;
   letter-spacing: 30px;
   text-transform: uppercase;
-  
 }
 
 .aligned-text_center{
   display: flex;
   justify-content: center;
-  margin: 20px 0;
   color: #FFF;
   font-weight: 700;
   font-size: 100px;
@@ -134,12 +131,12 @@ body{
 }
 
 .cover__description{
-  display: flex;
   position: absolute;
+  right: 50px;
   bottom: 50px;
+  display: flex;
   align-items: center;
   gap: 78px;
-  right: 50px;
 
 }
 
@@ -155,43 +152,50 @@ body{
 }
 
 .bet-button{
-  cursor: pointer;
+  border: 1px solid #FFF;
+  padding: 12px 32px;
   color: #FFF;
-  text-align: center;
+  font-weight: 400;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+  text-align: center;
   text-transform: uppercase;
-  border: 1px solid #FFF;
   background-color: transparent;
-  padding: 12px 32px;
+  cursor: pointer;
 }
 
 .lots{
   display: flex;
   flex-direction: column;
-  margin: 180px 50px;
+  margin: 180px 50px 0 50px;
 }
 
 .lots__heading{
+  margin: 0 0 27px 40px;
   color: #000;
+  font-weight: 700;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
-  margin: 0 0 27px 40px;
 }
 
 .lots__card-list{
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
+  max-width: 100%;
   list-style: none;
+}
+
+.lots__card-list-item{
+  flex-grow: 1;
 }
 
 .card{
   position: relative;
+  display: block;
   width: 430px;
   height: 450px;
   background-size: contain;
@@ -214,34 +218,137 @@ body{
 
 .card__title{
   position: absolute;
+  inset: 50px 40px;
   color: #FFF;
+  font-weight: 700;
   font-size: 22px;
   font-style: normal;
-  font-weight: 700;
   line-height: 120%;
   text-decoration-line: underline;
   text-transform: uppercase;
-  inset: 50px 40px;
 }
 
 .card__text{
   position: absolute;
+  right: 40px;
+  bottom: 50px;
+  left: 40px;
   color: #FFF;
+  font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
   line-height: 120%;
-  left: 40px;
-  bottom: 50px;
-  right: 40px;
 }
 
 .lots__look-more-link{
   display: flex;
+  margin: 30px 0 0 40px;
   color: #000;
+  font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  margin: 30px 0 0 40px;
+}
+
+.about{
+  display: flex;
+  margin: 182px 50px 0 50px;
+  margin-top: 181px;
+}
+
+.about__column{
+  display: flex;
+  
+  gap: 25px;
+}
+
+.about__logo{
+  display: flex;
+  justify-content: center;
+  max-width: 430px;
+  height: 240px;
+  padding: 0 95px;
+}
+
+.about__logo-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.about__logo-image img{
+  width: 148px;
+  background-size: contain;
+}
+
+.about__title{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-top: 100px;
+}
+
+.about__title-up{
+  color: #000;
+  font-weight: 700;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.about__text{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #000;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 356px;
+  margin: 180px 50px 90px;
+}
+
+.footer__list{
+  text-align: center;
+  list-style: none;
+}
+
+
+.footer__menu-link{
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;}
+
+.footer__menu-link-active{
+  text-decoration: none;
+}
+
+.footer__social-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 240px;
+  height: 48px;
+  list-style: none;
+}
+
+
+.footer__social-icon{
+  max-width: 48px;
+  max-height: 48px;
 }
