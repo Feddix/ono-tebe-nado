@@ -1,8 +1,5 @@
 
-body{
-  max-width: 1440px;
-  margin: auto;
-}
+
 
 .header{
   display: flex;
@@ -113,12 +110,15 @@ body{
 .aligned-text_center{
   display: flex;
   justify-content: center;
-  line-height: 1;
 }
 
 .aligned-text_right{
   display: flex;
   justify-content: flex-end;
+
+}
+
+.aligned-text-line-height{
   line-height: 1;
 
 }
@@ -190,6 +190,7 @@ body{
   gap: 25px;
   max-width: 100%;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .lots__card-list-item{
@@ -204,10 +205,9 @@ body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 430px;
-  min-height: 450px;
+  height: 100%;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .card-link{
@@ -223,12 +223,10 @@ body{
 
 .card_type_book{
   background-image: url(/images/card-lot-02.jpg);
-
 }
 
 .card_type_picture{
   background-image: url(/images/card-lot-03.jpg);
-
 }
 
 .card__title{
